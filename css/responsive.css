@@ -1,1 +1,0 @@
-@media (max-width:1000px){.cards,.three,.two{grid-template-columns:repeat(2,minmax(0,1fr))}.app-header{align-items:flex-start;flex-direction:column}}@media (max-width:640px){.cards,.three,.two{grid-template-columns:1fr}.app-main{padding:1rem}.menu a{font-size:.9rem;padding:.5rem}.page-head{display:block}.brand span{display:none}}

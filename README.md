@@ -1,4 +1,4 @@
-![Pódio do Campeonato](assets/podio-campeonato.png)
+![Pódio do Campeonato](public/assets/podio-campeonato.png)
 
 # 🏆 Campeonato Parceria Vive 2026
 
@@ -33,7 +33,7 @@ Ao final do evento, os **3 primeiros colocados** receberam troféus personalizad
 
 ## 📊 Estatísticas
 
-Este projeto reúne todas as estatísticas geradas durante o campeonato, como:
+Este projeto reúne todas as estatísticas geradas durante o campeonato em um dashboard Next.js, como:
 
 * Ranking geral por MMR;
 * Vitórias, derrotas e taxa de vitória;
@@ -42,18 +42,36 @@ Este projeto reúne todas as estatísticas geradas durante o campeonato, como:
 * Comparações entre participantes;
 * Informações por posição (Top, Jungle, Mid, ADC e Suporte).
 
-Todos os dados exibidos na página são gerados a partir dos arquivos JSON utilizados durante o campeonato, sem necessidade de banco de dados.
+Neste momento, os dados exibidos na página são gerados a partir dos arquivos JSON utilizados durante o campeonato. A estrutura já está preparada para substituir essa fonte por Supabase.
 
 ## 🛠️ Tecnologias
 
-Este projeto foi desenvolvido utilizando apenas tecnologias web estáticas:
+Este projeto foi migrado para uma base full-stack com:
 
-* HTML5
-* CSS3
-* JavaScript
+* Next.js
+* React
+* TypeScript
+* shadcn/ui
+* Supabase
 * JSON
 
-Todo o processamento das estatísticas acontece diretamente no navegador.
+O processamento das estatísticas fica centralizado na camada de domínio da aplicação.
+
+## 🚀 Como rodar
+
+```bash
+npm install
+npm run dev
+```
+
+Acesse `http://localhost:3000`.
+
+Para configurar o Supabase, copie `.env.example` para `.env.local` e preencha:
+
+```bash
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=
+```
 
 ## ❤️ Agradecimentos
 

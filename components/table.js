@@ -1,3 +1,0 @@
-import {escapeHtml} from '../js/utils.js';
-export function table(headers,rows){return`<div class="table-wrap"><table><thead><tr>${headers.map(h=>`<th data-key="${h.key}">${h.label}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${headers.map(h=>`<td>${h.render?h.render(r):escapeHtml(r[h.key])}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`}
-export function enableSort(root,rows,headers,render){root.querySelectorAll('th[data-key]').forEach(th=>th.onclick=()=>{const k=th.dataset.key;rows.sort((a,b)=>String(a[k]).localeCompare(String(b[k]),undefined,{numeric:true}));render(rows)})}
